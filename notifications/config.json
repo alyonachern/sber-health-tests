@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "Test with Allure",
+    "environment": "PROD",
+    "comment": "Results of autotests running",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "build/reports/allure-report/allureReport",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6573116067:AAF4QRITogAgx7nlQ39wNos847bB2Rz295Y",
+    "chat": "-1002009941807",
+    "replyTo": ""
+  }
+}
