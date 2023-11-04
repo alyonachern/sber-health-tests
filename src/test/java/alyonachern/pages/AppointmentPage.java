@@ -8,6 +8,7 @@ import java.time.Duration;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class AppointmentPage {
 
@@ -25,6 +26,12 @@ public class AppointmentPage {
         locationFieldDropdown.setValue(text);
         locationHiddenDropdown.shouldHave(exactText(text));
         locationHiddenDropdown.hover().click();
+        return this;
+    }
+
+    @Step("Открыть страницу записи к врачу")
+    public AppointmentPage openPage() {
+        open("https://docdoc.ru/doctor");
         return this;
     }
 
