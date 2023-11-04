@@ -5,7 +5,7 @@
     "comment": "Results of autotests running",
     "reportLink": "",
     "language": "en",
-    "allureFolder": "allure-report/allureReport",
+    "allureFolder": "allure-report",
     "enableChart": true
   },
   "telegram": {
