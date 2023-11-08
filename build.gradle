@@ -44,3 +44,15 @@ tasks.withType(Test) {
         }
     }
 }
+
+task local(type: Test) {
+    useJUnitPlatform{
+        includeTags("local")
+    }
+}
+
+task prod(type: Test) {
+    useJUnitPlatform{
+        includeTags("prod")
+    }
+}

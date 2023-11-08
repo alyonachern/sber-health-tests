@@ -3,6 +3,8 @@ package alyonachern.tests;
 import alyonachern.pages.AppointmentPage;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -14,6 +16,7 @@ public class AppointmentPageTests extends BaseTest {
 
     @ParameterizedTest(name = "Проверка заголовка контента при сортировке по метро: {0}")
     @ValueSource(strings = {"Академическая", "Беляево"})
+    @Tag("local")
     void checkTitleSortedByMetroTest(String text) {
        appointmentPage.openPage()
                 .setLocation(text)
@@ -23,6 +26,7 @@ public class AppointmentPageTests extends BaseTest {
 
     @Test
     @DisplayName("При активации чекбокса \"Детский врач\" отображаются детские врачи")
+    @Tag("local")
     void selectChildDoctorTest() {
         appointmentPage.openPage()
                 .activateKidCheckbox()
