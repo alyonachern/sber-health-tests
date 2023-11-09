@@ -45,14 +45,22 @@ tasks.withType(Test) {
     }
 }
 
-task local(type: Test) {
-    useJUnitPlatform{
-        includeTags("local")
+tasks.register('prod', Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+    useJUnitPlatform {
+        includeTags("prod")
     }
 }
 
-task prod(type: Test) {
-    useJUnitPlatform{
-        includeTags("prod")
+tasks.register('local', Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        exceptionFormat "full"
+    }
+    useJUnitPlatform {
+        includeTags("local")
     }
 }
