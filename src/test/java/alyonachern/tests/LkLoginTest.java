@@ -41,7 +41,7 @@ public class LkLoginTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("При сабмите формы с незаполненным номеров происходит ошибка валидации")
+    @DisplayName("При сабмите формы с незаполненным номером происходит ошибка валидации")
     @Tags({@Tag("local"), @Tag("prod")})
     void validationErrorEmptyPhoneTest() {
         mainPage.openMainPage()
