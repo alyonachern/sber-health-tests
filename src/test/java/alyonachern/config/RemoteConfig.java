@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.Sources({
         "classpath:${launch}.properties"
 })
-public interface RemoteConfig extends Config{
+public interface RemoteConfig extends Config {
     @Key("browser")
     @DefaultValue("CHROME")
     Browser getBrowser();
