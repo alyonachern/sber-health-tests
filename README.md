@@ -68,13 +68,15 @@ clean
 ${TAG}
 -Dbrowser=${BROWSER}
 -Dversion=${VERSION}
+-DwindowSize=${WINDOW_SIZE}
 -Dremote=https://user1:1234@selenoid.autotests.cloud/wd/hub
 ```
 
 При необходимости можно переопределить параметры сборки:
 - `TAG` - тесты с определенным тэгом (по умолчанию - `prod`)
-- `BROWSER` – браузер, в котором выполняются тесты (по-умолчанию - `chrome`).
-- `VERSION` – версия браузера, в которой выполняются тесты (по-умолчанию - `100.0`).
+- `BROWSER` – браузер, в котором выполняются тесты (по умолчанию - `chrome`).
+- `WINDOW_SIZE` – размер окна во время выполнения тестов (по умолчанию - `1920x1080`)
+- `VERSION` – версия браузера, в которой выполняются тесты (по умолчанию - `100.0`).
 
 
 ## Сборка в [Jenkins](https://jenkins.autotests.cloud/job/C22-alyonachern-17-project/)
