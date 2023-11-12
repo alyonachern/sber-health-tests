@@ -3,7 +3,7 @@ package alyonachern.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${launch}.properties"
+        "classpath:config/${launch}.properties"
 })
 public interface RemoteConfig extends Config {
     @Key("browser")
