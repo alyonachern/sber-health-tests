@@ -69,7 +69,7 @@ ${TAG}
 -Dbrowser=${BROWSER}
 -Dversion=${VERSION}
 -DwindowSize=${WINDOW_SIZE}
--Dremote=https://user1:1234@selenoid.autotests.cloud/wd/hub
+-Dremote=https://{SELENOID_USER}@{SELENOID_URL}/wd/hub
 ```
 
 При необходимости можно переопределить параметры сборки:
