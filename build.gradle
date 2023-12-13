@@ -5,6 +5,9 @@ plugins {
 
 group 'io.githib.alyonachern'
 version '1.0'
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
 
 repositories {
     mavenCentral()

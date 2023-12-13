@@ -8,12 +8,12 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LkLoginPage {
 
-    private SelenideElement content = $("#root"),
+    private final SelenideElement content = $("#root"),
             phoneErrorAlert = $("[data-testid=\"login-page-phone-error\"]"),
             phoneField = $("#phone"),
             submitButton = $("[data-testid=\"login-page-submit-button\"]");
 
-    private String titleOfNonReg = "Войдите, чтобы продолжить";
+    private final String titleOfNonReg = "Войдите, чтобы продолжить";
 
     @Step("Проверить текст для незарегистрированного пользователя")
     public void checkNonRegTitle() {

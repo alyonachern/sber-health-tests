@@ -7,18 +7,17 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class AppointmentPage {
 
-    private SelenideElement locationField = $("[data-testid=\"search-form__location-field\"]"),
+    private final SelenideElement locationField = $("[data-testid=\"search-form__location-field\"]"),
             locationFieldDropdown = locationField.$("[aria-labelledby=\"search-form__location-field__input_combobox-title\"]"),
             locationHiddenDropdown = $("[id=\"search-form__location-field__input_combobox-select\"]"),
             submitButton = $("button[type=\"submit\"]"),
             titleMain = $(".hebs1ko"),
             titleOfAdultDoctors = $(".tu6cc6d").find(withText("Популярные специальности для взрослых")),
-            kidReceptionCheckbox = $(".cv0xw6j > .c17yu1wz > label > span");
+            kidReceptionCheckbox = $$("span").findBy(matchText("Детский врач"));
 
     @Step("Установить локацию {text}")
     public AppointmentPage setLocation(String text) {

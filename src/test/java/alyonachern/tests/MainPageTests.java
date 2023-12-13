@@ -2,6 +2,7 @@ package alyonachern.tests;
 
 import alyonachern.pages.MainPage;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -14,6 +15,7 @@ public class MainPageTests extends BaseTest {
 
     @Test
     @DisplayName("На главной странице есть номер телефона контакт-центра")
+    @Owner("a.chernyakova")
     @Tags({@Tag("local"), @Tag("prod")})
     void checkPhoneNumberTest() {
         mainPage.openMainPage()
@@ -22,6 +24,7 @@ public class MainPageTests extends BaseTest {
 
     @Test
     @DisplayName("На главной странице есть реклама приложения")
+    @Owner("a.chernyakova")
     @Tags({@Tag("local"), @Tag("prod")})
     void checkAppPromotionTest() {
         mainPage.openMainPage()
