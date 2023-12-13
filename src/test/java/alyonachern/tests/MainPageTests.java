@@ -11,6 +11,9 @@ import org.junit.jupiter.api.Test;
 @Feature("Главная страница")
 public class MainPageTests extends BaseTest {
 
+    private final String phoneNumber = "8 800 100 35 98",
+            appPromotionText = "СберЗдоровье\n" + "Проверенные врачи у вас в телефоне";
+
     MainPage mainPage = new MainPage();
 
     @Test
@@ -19,7 +22,7 @@ public class MainPageTests extends BaseTest {
     @Tags({@Tag("local"), @Tag("prod")})
     void checkPhoneNumberTest() {
         mainPage.openMainPage()
-                .checkPhone();
+                .checkPhone(phoneNumber);
     }
 
     @Test
@@ -28,6 +31,6 @@ public class MainPageTests extends BaseTest {
     @Tags({@Tag("local"), @Tag("prod")})
     void checkAppPromotionTest() {
         mainPage.openMainPage()
-                .checkAppPromotion();
+                .checkAppPromotion(appPromotionText);
     }
 }
